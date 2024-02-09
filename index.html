@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body >
+<h1>List of Buttons to carry out different Tasks</h1>
+<hr>
+<hr>
+<button id="main" onclick="color()" ondblclick="color1()">Change Background</button>
+<button onclick="addition()">Add Numbers</button>
+<button onclick="multiplication()">Multiplication</button>
+<button onclick="randoms()">Random Number</button>
+<button onclick="odd()">Odd/Even</button>
+<button onclick="arm()">ArmStrong</button>
+<button onclick="ascii()">ASCII Value</button>
+<button onclick="words()">Random Word</button>
+<button onclick="multii()">Multiplication Table</button>
+<button onclick="construction()">Construction</button>
+<button onclick="construction()">Construction</button>
+<button onclick="construction()">Construction</button>
+<button onclick="construction()">Construction</button>
+<button onclick="construction()">Construction</button>
+<button onclick="construction()">Construction</button>
+<button onclick="construction()">Construction</button>
+
+
+<script type="text/javascript">
+	function construction(){
+		alert("The function is under constructions");
+		alert("Sorry!!");
+	}
+	function multii(){
+		let a = parseInt(prompt("Enter any number"));
+		for(let i=1;i<=10;i++){
+			document.write(a + "*" + i +"=" + a*i +"<br>");
+		}
+	}
+
+function words(){
+	const characters= 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+	let a = parseInt(prompt("Enter length of string"));
+	const charlength = characters.length;
+	result = '';
+	for(let i=0;i<a;i++){
+		 result = result + characters.charAt(Math.floor(Math.random()*charlength));
+	}
+	alert(result);
+}
+
+	function ascii(){
+		const string = prompt("Enter a character");
+
+		const result = string.charCodeAt(0);
+		alert(result);
+	}
+	function arm(){
+		let a = parseInt(prompt("Enter any number"));
+		let temp = a;
+		let sum= 0;
+		while (temp>0)
+		{
+			 let remainder = temp %10;
+			 sum += remainder*remainder*remainder;
+			 temp = parseInt(temp/10);
+		}
+	
+	if(sum==a){
+		alert("Armstrong Number");
+
+	}
+	else{
+		alert("Not a Armstrong Number");
+	}
+}
+	function color()
+	{
+
+		let a = Math.floor(Math.random()*10)+1;
+		switch (a) {
+	case 1:
+		document.body.style.backgroundColor ="Lightblue";
+		break;
+	case 2:
+		document.body.style.backgroundColor ="lightgreen";
+		break;
+	case 3:
+		document.body.style.backgroundColor ="pink";
+		break;
+	case 4:
+		document.body.style.backgroundColor ="lightgrey";
+		break;
+	case 5:
+		document.body.style.backgroundColor ="cyan";
+		break;
+	case 6:
+		document.body.style.backgroundColor ="lightyellow";
+		break;
+	case 7:
+		document.body.style.backgroundColor ="lightorange";
+		break;
+	case 8:
+		document.body.style.backgroundColor ="skyblue";
+		break;
+	case 9:
+		document.body.style.backgroundColor ="goldenrodyellow";
+		break;
+	case 10:
+		document.body.style.backgroundColor ="yellowred";
+		break;
+	default:
+		document.body.style.backgroundColor ="white";
+		break;
+	}
+}
+
+function color1()
+{
+		document.body.style.backgroundColor ="white";
+}
+
+function addition(){
+	const n = parseInt(prompt("Enter how many numbers"));
+	let sum = 0;
+	for(let i=0;i<n;i++){
+		const num= parseInt(prompt("Enter numbers: "));
+		sum +=num;
+	}
+
+	alert(sum);
+}
+
+
+function multiplication(){
+	const s= parseInt(prompt("Enter how many numbers:"));
+	let result=1;
+	for(let i=0;i<s;i++){
+		const mul = parseInt(prompt("Enter numbers:"));
+		result *= mul;
+	}
+	alert(result);
+}
+	
+function randoms(){
+	let a = Math.floor(Math.random()*100) +1;
+	let b = a.toFixed();
+	alert(b);
+}
+
+function odd(){
+	let a = parseInt(prompt("Enter any number:"));
+	if(a%2==0){
+		alert("Even");
+
+	}
+	else
+	{
+		alert("Odd");
+	}
+}
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+h1{
+	text-align: center;
+
+}
+button{
+	display: inline-flex;
+	margin: 15px;
+	margin-top: 25px;
+
+	padding: 15px;
+	font-size: 1em;
+	font-family: garamond;
+	border: 1px solid black;
+	border-radius: 10px 5px ;
+	background: transparent;
+	font-weight: bold;
+
+	transition: 0.4s ease-in-out;
+}
+button:hover{
+	background: lightcoral;
+	color: floralwhite;
+	border: 1.5px solid black;
+}
